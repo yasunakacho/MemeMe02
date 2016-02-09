@@ -6,4 +6,10 @@
 //  Copyright © 2016 Yasunaka Cho. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class MemeCollectionViewCell: UICollectionViewCell {
+    
+    @IBOutlet weak var sentMemeImageView: UIImageView!
+    
+}

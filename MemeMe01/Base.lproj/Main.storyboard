@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nC1-Yb-UwP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nC1-Yb-UwP">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--MemeTableViewController-->
         <scene sceneID="PVD-6I-KTb">
             <objects>
-                <tableViewController storyboardIdentifier="MemeTableViewController" title="MemeTableViewController" id="VZj-uV-XwQ" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MemeTableViewController" title="MemeTableViewController" id="VZj-uV-XwQ" customClass="MemeTableViewController" customModule="MemeMe01" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="nny-jq-bCx">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,7 +33,7 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="edit" id="6G9-cI-wc6"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="NPL-o6-smn">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="SDa-1P-RwN"/>
+                                <segue destination="BYZ-38-t0r" kind="presentation" id="SDa-1P-RwN"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -59,10 +59,10 @@
             </objects>
             <point key="canvasLocation" x="-1257" y="-609"/>
         </scene>
-        <!--Sent Memes-->
+        <!--MemeCollectionViewController-->
         <scene sceneID="P7c-oR-UpG">
             <objects>
-                <collectionViewController id="YyI-1H-MnR" customClass="memeCollectionViewController" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="MemeCollectionViewController" title="MemeCollectionViewController" id="YyI-1H-MnR" customClass="MemeCollectionViewController" customModule="MemeMe01" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="yNL-IS-LS5">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,14 +73,22 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="RnK-1N-yfS" customClass="memeCollectionViewCell">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MemeCollectionViewCell" id="RnK-1N-yfS" customClass="MemeCollectionViewCell" customModule="MemeMe01" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="120" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eaJ-BZ-2Hx">
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                        </imageView>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <connections>
+                                    <outlet property="sentMeme" destination="eaJ-BZ-2Hx" id="9AL-KH-vtn"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -92,7 +100,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Item" systemItem="edit" id="Xmt-hY-yz1"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="PxW-gd-hUs">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="mZR-jl-iGN"/>
+                                <segue destination="BYZ-38-t0r" kind="presentation" id="mZR-jl-iGN"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

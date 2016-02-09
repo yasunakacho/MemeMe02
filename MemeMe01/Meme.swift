@@ -15,10 +15,3 @@ struct Meme {
     var originalImage: UIImage?
     let memedImage: UIImage!
 }
-
-extension Meme {
-    
-    //Generate an array full of the allSentMemes in
-    
-
-}

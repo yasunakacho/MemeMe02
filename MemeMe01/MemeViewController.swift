@@ -6,7 +6,6 @@
 //  Copyright © 2016 Yasunaka Cho. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class MemeViewController: UIViewController {
