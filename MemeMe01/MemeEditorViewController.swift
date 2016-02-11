@@ -17,6 +17,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet weak var bottomTextField: UITextField!
     @IBOutlet weak var navigationBar: UIToolbar!
     @IBOutlet weak var toolBar: UIToolbar!
+    @IBOutlet weak var shareButton: UIBarButtonItem!
+    
     
     let memeTextAttributes = [
         NSStrokeColorAttributeName: UIColor.blackColor(),
@@ -38,21 +40,22 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         bottomTextField.delegate = self
         
         view.backgroundColor = UIColor.blackColor()
+        
     }
     
     override func viewWillAppear(animated: Bool) {
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
         super.viewWillAppear(animated)
         subscribeToKeyboardNotifications()
-        self.tabBarController?.tabBar.hidden = true
-        self.navigationController?.navigationBar.hidden = true
+        tabBarController?.tabBar.hidden = true
+        navigationController?.navigationBar.hidden = true
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         unsubscribeFromKeyboardNotifications()
-        self.tabBarController?.tabBar.hidden = false
-        self.navigationController?.navigationBar.hidden = false
+        tabBarController?.tabBar.hidden = false
+        navigationController?.navigationBar.hidden = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -171,7 +174,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     }
     
     @IBAction func cancelButtonPressed(sender: UIBarButtonItem) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        dismissViewControllerAnimated(true, completion: nil)
         print("cancel")
     }
     

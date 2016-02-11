@@ -10,16 +10,16 @@
         <scene sceneID="PVD-6I-KTb">
             <objects>
                 <tableViewController storyboardIdentifier="MemeTableViewController" title="MemeTableViewController" id="VZj-uV-XwQ" customClass="MemeTableViewController" customModule="MemeMe01" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="nny-jq-bCx">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="25" sectionFooterHeight="25" id="nny-jq-bCx">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SentMemeCell" id="sxz-Rz-lb4">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemeCollectionViewCell" rowHeight="90" id="sxz-Rz-lb4">
+                                <rect key="frame" x="0.0" y="89" width="600" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sxz-Rz-lb4" id="Ezr-MK-EBi">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="89"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -66,6 +66,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="yNL-IS-LS5">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FeU-dL-m5i">
                             <size key="itemSize" width="120" height="120"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -80,12 +81,18 @@
                                     <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eaJ-BZ-2Hx">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eaJ-BZ-2Hx">
                                             <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="eaJ-BZ-2Hx" secondAttribute="trailing" constant="-8" id="1b9-5F-XHM"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="eaJ-BZ-2Hx" secondAttribute="bottom" constant="-8" id="27b-xn-iGA"/>
+                                    <constraint firstItem="eaJ-BZ-2Hx" firstAttribute="top" secondItem="RnK-1N-yfS" secondAttribute="topMargin" constant="-8" id="FUJ-yH-X8N"/>
+                                    <constraint firstItem="eaJ-BZ-2Hx" firstAttribute="leading" secondItem="RnK-1N-yfS" secondAttribute="leadingMargin" constant="-8" id="Q8y-J5-GaO"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="sentMeme" destination="eaJ-BZ-2Hx" id="9AL-KH-vtn"/>
                                 </connections>
@@ -104,6 +111,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <keyCommands>
+                        <keyCommand/>
+                    </keyCommands>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ezi-oD-cni" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -156,7 +166,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Gk-80-ewG">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Gk-80-ewG">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="uTt-zC-9RZ"/>
@@ -174,18 +184,18 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="HuW-Ba-So7"/>
                                 </items>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Ar-dw-wey">
-                                <rect key="frame" x="0.0" y="44" width="600" height="512"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Ar-dw-wey">
+                                <rect key="frame" x="0.0" y="64" width="600" height="492"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GxK-vm-dF6">
-                                <rect key="frame" x="70" y="94" width="460" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GxK-vm-dF6">
+                                <rect key="frame" x="70" y="114" width="460" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="154" y="83" width="92" height="36"/>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vPp-vJ-EOB">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vPp-vJ-EOB">
                                 <rect key="frame" x="70" y="476" width="460" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
@@ -193,8 +203,8 @@
                                     <rect key="frame" x="154" y="83" width="92" height="36"/>
                                 </variation>
                             </textField>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ha8-ho-IAR">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ha8-ho-IAR">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
                                     <barButtonItem systemItem="action" id="0YR-JJ-5Ry">
                                         <connections>
@@ -238,6 +248,7 @@
                         <outlet property="cameraButton" destination="ucN-Jo-Vdj" id="UZf-gZ-gsM"/>
                         <outlet property="imagePickerView" destination="5Ar-dw-wey" id="ifG-1j-CLQ"/>
                         <outlet property="navigationBar" destination="ha8-ho-IAR" id="2RC-TK-YOC"/>
+                        <outlet property="shareButton" destination="0YR-JJ-5Ry" id="JpJ-bg-Y3c"/>
                         <outlet property="toolBar" destination="6Gk-80-ewG" id="d7x-UR-qlZ"/>
                         <outlet property="topTextField" destination="GxK-vm-dF6" id="tFI-78-RfG"/>
                     </connections>

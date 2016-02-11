@@ -12,7 +12,7 @@ class MemeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        navigationItem.rightBarButtonItem = self.editButtonItem()
         }
     
     func startOver(){

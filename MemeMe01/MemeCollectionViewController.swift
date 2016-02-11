@@ -24,13 +24,14 @@ class MemeCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor.whiteColor()
         
         //TODO: Implement flowLayout here??(step6-4)
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.tabBarController?.tabBar.hidden = false
+        tabBarController?.tabBar.hidden = false
         
         let object = UIApplication.sharedApplication().delegate
         let appDelegate = object as! AppDelegate
@@ -43,16 +44,14 @@ class MemeCollectionViewController: UICollectionViewController {
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-//      understand the differences compared to below.
-//        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CustomMemeCell", forIndexPath: indexPath) as! CustomMemeCell
-//        let meme = memes[indexPath.item]
+//      understand the differences below.
 //        cell.setText(meme.top, bottomString: meme.bottom)
 //        let imageView = UIImageView(image: meme.image)
 //        cell.backgroundView = imageView
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("MemeCollectionViewCell", forIndexPath: indexPath) as! MemeCollectionViewCell
         let meme = memes[indexPath.item]
-        cell.sentMemeImageView!.image = meme.memedImage
+        cell.sentMeme!.image = meme.memedImage
         
         return cell
     }
@@ -61,7 +60,7 @@ class MemeCollectionViewController: UICollectionViewController {
         
         let detailController = self.storyboard!.instantiateViewControllerWithIdentifier("SentMemeDetailViewController") as! SentMemeDetailViewController
         detailController.meme = self.memes [indexPath.item]
-        self.navigationController!.pushViewController(detailController, animated: true)
+        navigationController!.pushViewController(detailController, animated: true)
         
     }
 
