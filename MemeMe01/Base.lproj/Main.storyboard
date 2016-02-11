@@ -260,7 +260,7 @@
         <!--Sent Meme Detail View Controller-->
         <scene sceneID="M9L-wV-Awy">
             <objects>
-                <viewController id="OBy-jh-Pzg" customClass="SentMemeDetailViewController" customModule="MemeMe01" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SentMemeDetailViewController" id="OBy-jh-Pzg" customClass="SentMemeDetailViewController" customModule="MemeMe01" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="u82-wi-qhR"/>
                         <viewControllerLayoutGuide type="bottom" id="vlh-bc-a9d"/>
@@ -269,16 +269,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zQW-Lz-ZU9">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zQW-Lz-ZU9">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="zQW-Lz-ZU9" secondAttribute="trailing" constant="-20" id="4bo-H4-yvu"/>
-                            <constraint firstItem="zQW-Lz-ZU9" firstAttribute="leading" secondItem="SKl-iX-4od" secondAttribute="leadingMargin" constant="-20" id="Ow6-Ef-mEF"/>
-                            <constraint firstItem="zQW-Lz-ZU9" firstAttribute="top" secondItem="u82-wi-qhR" secondAttribute="bottom" id="cVL-3G-36S"/>
-                            <constraint firstItem="vlh-bc-a9d" firstAttribute="top" secondItem="zQW-Lz-ZU9" secondAttribute="bottom" id="nVv-lt-5Ec"/>
+                            <constraint firstItem="zQW-Lz-ZU9" firstAttribute="leading" secondItem="SKl-iX-4od" secondAttribute="leadingMargin" constant="-20" id="5KH-nr-7n5"/>
+                            <constraint firstItem="vlh-bc-a9d" firstAttribute="top" secondItem="zQW-Lz-ZU9" secondAttribute="bottom" id="SZK-5m-vVS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zQW-Lz-ZU9" secondAttribute="trailing" constant="-20" id="VJM-fF-cM2"/>
+                            <constraint firstItem="zQW-Lz-ZU9" firstAttribute="top" secondItem="SKl-iX-4od" secondAttribute="topMargin" id="mgn-eJ-UF6"/>
                         </constraints>
                     </view>
                     <connections>
@@ -287,7 +287,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ImN-5k-dc5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1573" y="-61"/>
+            <point key="canvasLocation" x="1574" y="-74"/>
         </scene>
     </scenes>
     <resources>

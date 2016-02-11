@@ -32,6 +32,7 @@ class MemeCollectionViewController: UICollectionViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         tabBarController?.tabBar.hidden = false
+        collectionView!.reloadData()
         
         let object = UIApplication.sharedApplication().delegate
         let appDelegate = object as! AppDelegate
