@@ -16,7 +16,7 @@ class MemeViewController: UIViewController {
         }
     
     func startOver(){
-        if let navigationController = self.navigationController {
+        if let navigationController = navigationController {
             navigationController.popToRootViewControllerAnimated(true)
         }
     }

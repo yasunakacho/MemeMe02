@@ -133,7 +133,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     func generateMemedImage() ->UIImage {
         
         //TODO: Hide toolbar and navbar
-        navigationController?.navigationBar.hidden = true
+        navigationBar.hidden = true
         toolBar.hidden = true
         
         //Render view to an image
@@ -143,7 +143,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         UIGraphicsEndImageContext()
         
         //TODO: Show toolbar and navbar
-        navigationController?.navigationBar.hidden = false
+        navigationBar.hidden = false
         toolBar.hidden = false
         
         return memedImage
@@ -170,6 +170,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
                 self.save()
                 self.dismissViewControllerAnimated(true, completion: nil)
             }
+            
         }
     }
     

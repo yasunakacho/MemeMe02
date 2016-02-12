@@ -114,6 +114,9 @@
                     <keyCommands>
                         <keyCommand/>
                     </keyCommands>
+                    <connections>
+                        <outlet property="flowLayout" destination="FeU-dL-m5i" id="FWM-h5-ara"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ezi-oD-cni" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -295,6 +298,6 @@
         <image name="TableIcon" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="SDa-1P-RwN"/>
+        <segue reference="mZR-jl-iGN"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -22,8 +22,6 @@ class MemeTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //let step 5.8?/
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -41,15 +39,13 @@ class MemeTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.memes.count 
+        return self.memes.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("MemeCollectionViewCell")!
         let meme = memes[indexPath.row]
-//        cell.textLabel?.text = meme.topText! + " " + meme.bottomText!
-//        cell.imageView!.image = meme.memedImage
 
         cell.textLabel?.text = meme.topText! + " " + meme.bottomText!
         cell.imageView!.image = meme.memedImage
@@ -61,7 +57,7 @@ class MemeTableViewController: UITableViewController {
         
         let detailController = self.storyboard!.instantiateViewControllerWithIdentifier("SentMemeDetailViewController") as! SentMemeDetailViewController
         detailController.meme = memes[indexPath.row]
-        self.navigationController!.pushViewController(detailController, animated: true)
+        navigationController!.pushViewController(detailController, animated: true)
     }
 
 }

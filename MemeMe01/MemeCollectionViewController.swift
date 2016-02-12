@@ -9,8 +9,8 @@
 import UIKit
 
 class MemeCollectionViewController: UICollectionViewController {
-    
-    //TODO: Add outlet to flowLayout here?? (step6-4)
+        
+    @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     
     var memes: [Meme]{
         
@@ -24,9 +24,13 @@ class MemeCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.whiteColor()
         
-        //TODO: Implement flowLayout here??(step6-4)
+        let space: CGFloat = 3.0
+        let dimension = (view.frame.size.width - (2 * space)) / 3.0
+        
+        flowLayout.minimumInteritemSpacing = space
+        flowLayout.itemSize = CGSizeMake(dimension, dimension)
+
     }
     
     override func viewWillAppear(animated: Bool) {
