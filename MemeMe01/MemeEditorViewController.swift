@@ -49,6 +49,13 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         subscribeToKeyboardNotifications()
         tabBarController?.tabBar.hidden = true
         navigationController?.navigationBar.hidden = true
+        
+        if imagePickerView.image == nil {
+            shareButton.enabled = false
+        } else {
+            shareButton.enabled = true
+        }
+        
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -61,6 +68,10 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true 
     }
 
     @IBAction func pickAnImageFromAlbum(sender: AnyObject) {
@@ -137,8 +148,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         toolBar.hidden = true
         
         //Render view to an image
-        UIGraphicsBeginImageContext(self.view.frame.size)
-        view.drawViewHierarchyInRect(self.view.frame, afterScreenUpdates: true)
+        UIGraphicsBeginImageContext(view.frame.size)
+        view.drawViewHierarchyInRect(view.frame, afterScreenUpdates: true)
         let memedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
@@ -178,7 +189,6 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         dismissViewControllerAnimated(true, completion: nil)
         print("cancel")
     }
-    
  
 }
 

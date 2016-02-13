@@ -188,10 +188,10 @@
                                 </items>
                             </toolbar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Ar-dw-wey">
-                                <rect key="frame" x="0.0" y="64" width="600" height="492"/>
+                                <rect key="frame" x="0.0" y="44" width="600" height="512"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GxK-vm-dF6">
-                                <rect key="frame" x="70" y="114" width="460" height="30"/>
+                                <rect key="frame" x="70" y="94" width="460" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -207,7 +207,7 @@
                                 </variation>
                             </textField>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ha8-ho-IAR">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <items>
                                     <barButtonItem systemItem="action" id="0YR-JJ-5Ry">
                                         <connections>
@@ -231,7 +231,6 @@
                             <constraint firstItem="5Ar-dw-wey" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="AJg-WR-Ty5"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6Gk-80-ewG" secondAttribute="bottom" id="EIc-S3-Ac6"/>
                             <constraint firstItem="6Gk-80-ewG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="FeT-Vm-Sau"/>
-                            <constraint firstItem="ha8-ho-IAR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="O1F-Ov-Su8"/>
                             <constraint firstItem="6Gk-80-ewG" firstAttribute="top" secondItem="vPp-vJ-EOB" secondAttribute="bottom" constant="50" id="QLI-br-w9O"/>
                             <constraint firstItem="6Gk-80-ewG" firstAttribute="top" secondItem="5Ar-dw-wey" secondAttribute="bottom" id="Rec-fl-zYM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5Ar-dw-wey" secondAttribute="trailing" constant="-20" id="TkT-7v-cMK"/>
@@ -245,6 +244,7 @@
                             <constraint firstItem="5Ar-dw-wey" firstAttribute="top" secondItem="ha8-ho-IAR" secondAttribute="bottom" id="xQO-us-Uc2"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="albumButton" destination="p4T-3q-3LY" id="uPX-28-MeI"/>
                         <outlet property="bottomTextField" destination="vPp-vJ-EOB" id="AKH-c9-3pk"/>
@@ -272,7 +272,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zQW-Lz-ZU9">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zQW-Lz-ZU9">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                         </subviews>

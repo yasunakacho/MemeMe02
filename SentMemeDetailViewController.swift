@@ -13,6 +13,18 @@ class SentMemeDetailViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     var meme: Meme!
+        
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationItem.rightBarButtonItem = self.editButtonItem()
+        }
+        
+    func startOver(){
+        if let navigationController = navigationController {
+            navigationController.popToRootViewControllerAnimated(true)
+        }
+    }
+    
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
