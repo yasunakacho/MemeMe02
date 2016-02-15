@@ -42,10 +42,10 @@
             </objects>
             <point key="canvasLocation" x="-419" y="360"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--UINavigationController-->
         <scene sceneID="7Vx-L0-few">
             <objects>
-                <navigationController id="cgi-MA-dLs" sceneMemberID="viewController">
+                <navigationController title="UINavigationController" id="cgi-MA-dLs" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="GridIcon" id="phc-QE-25l"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KpQ-rO-H8O">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -122,10 +122,10 @@
             </objects>
             <point key="canvasLocation" x="-409" y="-609"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--UINavigationController-->
         <scene sceneID="gE0-qS-JwL">
             <objects>
-                <navigationController id="96V-cX-2TT" sceneMemberID="viewController">
+                <navigationController title="UINavigationController" id="96V-cX-2TT" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="TableIcon" id="R9E-5m-h33"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MNz-DS-j4S">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -139,10 +139,10 @@
             </objects>
             <point key="canvasLocation" x="-1239" y="359"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--UITabBarController-->
         <scene sceneID="SX7-AF-1SF">
             <objects>
-                <tabBarController id="nC1-Yb-UwP" sceneMemberID="viewController">
+                <tabBarController title="UITabBarController" id="nC1-Yb-UwP" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="YIZ-Jj-Ffv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -157,10 +157,10 @@
             </objects>
             <point key="canvasLocation" x="-2319" y="-61"/>
         </scene>
-        <!--Meme Editor View Controller-->
+        <!--MemeEditorViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MemeEditorViewController" customModule="MemeMe01" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="MemeEditorViewController" id="BYZ-38-t0r" customClass="MemeEditorViewController" customModule="MemeMe01" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -260,10 +260,10 @@
             </objects>
             <point key="canvasLocation" x="581" y="-61"/>
         </scene>
-        <!--Sent Meme Detail View Controller-->
+        <!--SentMemeDetailViewController-->
         <scene sceneID="M9L-wV-Awy">
             <objects>
-                <viewController storyboardIdentifier="SentMemeDetailViewController" id="OBy-jh-Pzg" customClass="SentMemeDetailViewController" customModule="MemeMe01" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SentMemeDetailViewController" title="SentMemeDetailViewController" id="OBy-jh-Pzg" customClass="SentMemeDetailViewController" customModule="MemeMe01" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="u82-wi-qhR"/>
                         <viewControllerLayoutGuide type="bottom" id="vlh-bc-a9d"/>
@@ -298,6 +298,6 @@
         <image name="TableIcon" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mZR-jl-iGN"/>
+        <segue reference="SDa-1P-RwN"/>
     </inferredMetricsTieBreakers>
 </document>

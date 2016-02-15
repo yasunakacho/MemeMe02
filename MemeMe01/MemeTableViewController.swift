@@ -22,6 +22,7 @@ class MemeTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.allowsMultipleSelectionDuringEditing = false
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -35,6 +36,7 @@ class MemeTableViewController: UITableViewController {
         
         let object = UIApplication.sharedApplication().delegate
         let appDelegate = object as! AppDelegate
+        
         memes = appDelegate.memes
     }
     
@@ -58,6 +60,18 @@ class MemeTableViewController: UITableViewController {
         let detailController = self.storyboard!.instantiateViewControllerWithIdentifier("SentMemeDetailViewController") as! SentMemeDetailViewController
         detailController.meme = memes[indexPath.row]
         navigationController!.pushViewController(detailController, animated: true)
+    }
+    
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            // handle delete (by removing the data from your array and updating the tableview)
+            memes.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        }
     }
 
 }
