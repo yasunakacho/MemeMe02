@@ -30,17 +30,18 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        topTextField.defaultTextAttributes = memeTextAttributes
-        bottomTextField.defaultTextAttributes = memeTextAttributes
-        topTextField.text = "TOP"
-        bottomTextField.text = "BOTTOM"
-        topTextField.textAlignment = .Center
-        bottomTextField.textAlignment = .Center
-        topTextField.delegate = self
-        bottomTextField.delegate = self
-        
+        textField(topTextField, text: "TOP")
+        textField(bottomTextField, text: "BOTTOM")
         view.backgroundColor = UIColor.blackColor()
         
+    }
+    
+    //How to create auguments with more than two parametors?
+    func textField(textField: UITextField, text: String){
+        textField.defaultTextAttributes = memeTextAttributes
+        textField.text = text
+        textField.textAlignment = .Center
+        textField.delegate = self
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -75,18 +76,18 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     }
 
     @IBAction func pickAnImageFromAlbum(sender: AnyObject) {
-        
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
-        presentViewController(imagePicker, animated: true, completion: nil)
-        
+        pickAnImage(UIImagePickerControllerSourceType.PhotoLibrary)
     }
     
     @IBAction func pickAnImageFromCamera(sender: AnyObject) {
+        pickAnImage(UIImagePickerControllerSourceType.Camera)
+    }
+    
+    // Create a function that takes UIImagePickerController as argument
+    func pickAnImage (sourceType: UIImagePickerControllerSourceType) {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
-        imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
+        imagePicker.sourceType = sourceType
         presentViewController(imagePicker, animated: true, completion: nil)
     }
     

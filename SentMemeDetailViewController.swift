@@ -19,11 +19,11 @@ class SentMemeDetailViewController: UIViewController {
         navigationItem.rightBarButtonItem = self.editButtonItem()
         }
         
-    override func editButtonItem() -> UIBarButtonItem {
-        let controller = self.storyboard!.instantiateViewControllerWithIdentifier("MemeEditorViewController") as! MemeEditorViewController
-        self.navigationController?.presentViewController(controller, animated: true, completion: nil)
-        return editButtonItem()
-    }
+//    override func editButtonItem() -> UIBarButtonItem {
+//        let controller = self.storyboard!.instantiateViewControllerWithIdentifier("MemeEditorViewController") as! MemeEditorViewController
+//        self.navigationController?.presentViewController(controller, animated: true, completion: nil)
+//        return editButtonItem()
+//    }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
