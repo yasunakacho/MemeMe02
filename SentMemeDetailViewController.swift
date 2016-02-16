@@ -19,10 +19,10 @@ class SentMemeDetailViewController: UIViewController {
         navigationItem.rightBarButtonItem = self.editButtonItem()
         }
         
-    func startOver(){
-        if let navigationController = navigationController {
-            navigationController.popToRootViewControllerAnimated(true)
-        }
+    override func editButtonItem() -> UIBarButtonItem {
+        let controller = self.storyboard!.instantiateViewControllerWithIdentifier("MemeEditorViewController") as! MemeEditorViewController
+        self.navigationController?.presentViewController(controller, animated: true, completion: nil)
+        return editButtonItem()
     }
     
     override func viewWillAppear(animated: Bool) {

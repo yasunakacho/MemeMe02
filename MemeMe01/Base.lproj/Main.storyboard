@@ -104,7 +104,7 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Sent Memes" id="6iu-QX-wvt">
-                        <barButtonItem key="leftBarButtonItem" title="Item" systemItem="edit" id="Xmt-hY-yz1"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="Xmt-hY-yz1"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="PxW-gd-hUs">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="presentation" id="mZR-jl-iGN"/>
@@ -298,6 +298,6 @@
         <image name="TableIcon" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="SDa-1P-RwN"/>
+        <segue reference="mZR-jl-iGN"/>
     </inferredMetricsTieBreakers>
 </document>
